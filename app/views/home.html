@@ -1,1 +1,70 @@
-Hello world
+<header>
+    <div class="logo"><span class="mega-octicon octicon-logo-github"></span> <label>Issues</label></div>
+
+    <div class="site-search  js-site-search" role="search">
+        <form ng-submit="searchSubmit(data)" accept-charset="UTF-8" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="" _lpchecked="1">
+            <table>
+                <tr>
+                    <td><input type="text" class="textbox" ng-model="data.url" data-hotkey="s" name="q" placeholder="paste git repository here" data-global-scope-placeholder="Search GitHub" data-repo-scope-placeholder="Search" autocapitalize="off"></td>
+                    <td><button type="submit" class="btn btn-sm"><span class="octicon octicon-search"></span> find</button></td>
+                </tr>
+            </table>
+
+        </form>
+    </div>
+
+    <div class="clear"></div>
+</header>
+
+        <div class="wrapper">
+
+<div class="issues-listing" data-pjax="">
+
+<div class="table-list-header" id="js-issues-toolbar">
+
+<div class="table-list-filters">
+
+<div class="table-list-header-toggle states left">
+    <a href="/Famous/famous-angular/issues?q=is%3Aopen+is%3Aissue" class="btn-link selected">
+        <span class="octicon octicon-issue-opened"></span>
+        {{issues.msg}}
+    </a>
+
+</div>
+
+
+<div class="table-list-header-toggle right">
+<div class="left select-menu js-menu-container js-select-menu" data-contents-url="/Famous/famous-angular/issues/show_menu_content?partial=filters%2Fauthors_content&amp;q=is%3Aissue+is%3Aopen">
+
+    <img class="ajaxLoader" ng-show="showLoading" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-128.gif" alt="" />
+
+</div>
+
+
+</div>
+</div>
+
+</div>
+
+
+<ul class="table-list table-list-bordered table-list-issues js-navigation-container js-active-navigation-container">
+
+<issue ng-repeat="issues in issues.data"></issue>
+
+</ul>
+
+
+<div class="paginate-container">
+
+
+</div>
+
+<div class="protip">
+    <span class="octicon octicon-light-bulb text-muted"></span>
+    <strong>ProTip!</strong>
+    This is not really GitHub.
+</div>
+
+</div>
+
+            </div>

@@ -1,0 +1,40 @@
+
+<li id="issue_{{issues.number}}" data-issue-id="{{issues.number}}" class="read table-list-item js-navigation-item js-issue-row">
+
+
+    <div class="table-list-cell table-list-cell-type">
+        <a href="{{issues.html_url}}" aria-label="View all issues" class="tooltipped tooltipped-n">
+            <span class="octicon octicon-issue-opened open"></span>
+        </a>  </div>
+
+    <div class="table-list-cell issue-title">
+
+
+        <a href="{{issues.html_url}}" target="_blank" class="issue-title-link js-navigation-open">
+            {{issues.title}}
+        </a>
+        <div class="issue-meta">
+      <span class="issue-meta-section opened-by">
+        #{{issues.number}}
+          {{issues.state}} <time datetime="{{issues.updated_at | date}}" is="relative-time" title="{{issues.updated_at | date}}">{{issues.updated_at | date}}</time> by
+          <a href="{{issues.html_url}}" aria-label="View all issues opened by {{issues.user.login}}" class="tooltipped tooltipped-s muted-link">{{issues.user.login}}</a>
+      </span>
+
+
+      <span class="issue-meta-section css-truncate issue-milestone">
+      </span>
+
+
+        </div>
+    </div>
+
+    <div class="table-list-cell table-list-cell-avatar">
+    </div>
+
+    <div class="table-list-cell issue-comments">
+        <a href="{{issues.html_url}}" class="muted-link ">
+            <span class="octicon octicon-comment"></span>
+            {{issues.comments}}
+        </a>
+    </div>
+</li>
