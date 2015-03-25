@@ -16,3 +16,7 @@ app.config(['$routeProvider', function($routeProvider){
         });
 
 }]);
+
+app.constant('settings', {
+    baseUrl: 'https://api.github.com'
+});
